@@ -19,7 +19,6 @@ jobs:
         python -m pip install --upgrade pip
         pip install pylint
         pip install pyautogui
-        pip install gw
         pip install pygetwindow
         pip install time
         pip install random2
