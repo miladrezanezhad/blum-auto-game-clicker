@@ -4,7 +4,9 @@
  `install pyton 3.11`
 ### Library Installation 📚
 1.`pip install pyautogui` 
+
 1.`pip install gw` 
+
 1.`pip install pygetwindow` 
 1.`pip install time` 
 1.`pip install random2` 
