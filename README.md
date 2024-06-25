@@ -5,11 +5,16 @@
 ### Library Installation 📚
 1.`pip install pyautogui` 
 
-1.`pip install gw` 
+2.`pip install gw` 
 
-1.`pip install pygetwindow` 
-1.`pip install time` 
-1.`pip install random2` 
-1.`pip install pynput` 
-1.`pip install keyboard`
-1.`pip install mouse`
+3.`pip install pygetwindow` 
+
+4.`pip install time` 
+
+5.`pip install random2` 
+
+6.`pip install pynput` 
+
+7.`pip install keyboard`
+
+8.`pip install mouse`
