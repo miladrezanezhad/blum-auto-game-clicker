@@ -1,7 +1,7 @@
 # blum-auto-game-clicker
 
 ## install windows
- `install pyton 3.11`
+ `install python 3.11`
 ### Library Installation 📚
 1.`pip install pyautogui` 
 
