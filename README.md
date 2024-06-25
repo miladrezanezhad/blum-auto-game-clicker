@@ -1,0 +1,1 @@
+# blum-auto-game-clicker
