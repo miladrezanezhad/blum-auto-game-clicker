@@ -14,15 +14,12 @@ mouse = Controller()
 
 def print_intro():
     print(r"""
-
    ____  _          _       _     _                                 _ 
   / __ \| | ___ __ (_) __ _| |__ | |_ _ __   _____      _____  __ _(_)
  / / _` | |/ / '_ \| |/ _` | '_ \| __| '_ \ / _ \ \ /\ / / __|/ _` | |
 | | (_| |   <| | | | | (_| | | | | |_| | | |  __/\ V  V /\__ \ (_| | |
  \ \__,_|_|\_\_| |_|_|\__, |_| |_|\__|_| |_|\___| \_/\_/ |___/\__,_|_|
   \____/              |___/                                           
-
-
 """)
     print(Fore.RED + "knight news- t.me/knightnewsai")
 
@@ -55,7 +52,7 @@ def click_play_button(is_first_time):
         if not activate_window(telegram_window):
             pass
         click(play_button_coords[0], play_button_coords[1])
-        print_message('[🌙] | Play button pressed.')
+        print_message('[🌙] | Кнопка Play нажата.')
         time.sleep(1)
     except Exception as e:
         pass
@@ -76,18 +73,18 @@ def find_and_click_objects():
                     time.sleep(0.001)
 
 def start_game():
-    window_name = input('\n[⚡️] | Crypto Clickers Hub | Press 1')
-    num_games = int(input('\n[☘️] | Enter the number of games you want to play: '))
+    window_name = input('\n[⚡️] | Crypto Clickers Hub | Нажми 1 ')
+    num_games = int(input('\n[☘️] | Введите количество игр, которые вы хотите сыграть: '))
 
     if window_name == '1':
         window_name = "TelegramDesktop"
 
     check = gw.getWindowsWithTitle(window_name)
     if not check:
-        print(f"[❌] | Window - {window_name} not found!")
+        print(f"[❌] | Окно - {window_name} не найдено!")
         exit()
 
-    print(f"[☘️] | Window found - {window_name}\n[☘️] | Press 'q' to pause.")
+    print(f"[☘️] | Окно найдено - {window_name}\n[☘️] | Нажмите 'q' для паузы.")
 
     global telegram_window
     telegram_window = check[0]
@@ -105,32 +102,32 @@ def start_game():
             if keyboard.is_pressed('q'):
                 paused = not paused
                 if paused:
-                    print('[🌙] | Pause')
+                    print('[🌙] | Пауза')
                 else:
-                    print('[🌙] | Resumption of work')
+                    print('[🌙] | Возобновление работы')
                 time.sleep(1)
 
             while paused:
                 if keyboard.is_pressed('q'):
                     paused = False
-                    print('[🌙] | Resumption of work')
+                    print('[🌙] | Возобновление работы')
                     time.sleep(1)
 
             if not activate_window(telegram_window):
-                print("[❌] | Failed to activate window, try again...")
+                print("[❌] | Не удалось активировать окно, повторная попытка...")
                 time.sleep(1)
                 continue
 
             find_and_click_objects()
 
         games_played += 1
-        print(f"[🌕] | Game over. Games played: {games_played}")
+        print(f"[🌕] | Игра завершена. Игр сыграно: {games_played}")
 
         if games_played < num_games:
             is_first_time = False
             time.sleep(2)
 
-    print(f'[☘️] | {num_games} tickets are spent, the script is suspended.')
+    print(f'[☘️] | {num_games} билетов потрачено, скрипт приостановлен.')
 
 if __name__ == "__main__":
     print_intro()
